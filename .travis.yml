@@ -1,0 +1,12 @@
+language: nodejs
+
+script: yarn build
+
+cache: yarn
+
+deploy:
+  provider: script
+  script: bash deploy/deploy.sh
+  on:
+    branch: master
+    skip_cleanup: true
